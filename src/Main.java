@@ -1,17 +1,29 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Scanner;
+import java.util.HashMap;
 
 public class Main {
 
     public static void main(String[] args) {
-        final Scanner scanner = new Scanner(System.in);
-        ArrayList<Long> arrayList = new ArrayList<>();
-        while (scanner.hasNextLong()) arrayList.add(scanner.nextLong());
-        System.out.printf("Total numbers: %d.", arrayList.size());
-        long max = Collections.max(arrayList);
-        int count = 0;
-        for (Long number : arrayList) if (number == max) count++;
-        System.out.printf("The greatest number: %d (%d time(s)).", max, count);
+        HashMap hashMap = new HashMap();
+        for (int i = 0; i < args.length; i += 2)
+            hashMap.put(args[i], args[i + 1]);
+
+        new Main().run(hashMap);
+    }
+
+    private void run(HashMap hashMap) {
+        DataType dataType;
+        // FIXME: 28.01.2020 
+        if (hashMap.containsKey("-dataType") && hashMap.containsValue("long")) {
+            dataType = DataTypeFactory.newInstance();
+        } else if (hashMap.containsKey("-dataType") && hashMap.containsValue("line")) {
+            dataType = DataTypeFactory.newInstance();
+        } else if (hashMap.containsKey("-dataType") && hashMap.containsValue("word")) {
+            dataType = DataTypeFactory.newInstance();
+        }
+
+
+        // FIXME: 28.01.2020 
+        dataType.processing();
+        dataType.print();
     }
 }

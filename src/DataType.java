@@ -10,8 +10,6 @@ abstract class DataType {
     abstract void output();
 }
 
-
-// TODO: 28.01.2020  
 class DataLong extends DataType {
 
     private ArrayList<Long> arrayList;
@@ -35,7 +33,8 @@ class DataLong extends DataType {
     @Override
     void output() {
         System.out.printf("Total numbers: %d.", arrayList.size());
-        System.out.printf("The greatest number: %d (%d time(s), %d%%).", max, count, count / arrayList.size());
+        System.out.printf("The greatest number: %d (%d time(s), %.0f%%).",
+                max, count, 100 * (double) count / (double) arrayList.size());
     }
 }
 
@@ -49,7 +48,7 @@ class DataLine extends DataType {
     void input() {
         final Scanner scanner = new Scanner(System.in);
         arrayList = new ArrayList<>();
-        while (scanner.hasNext())
+        while (scanner.hasNextLine())
             arrayList.add(scanner.nextLine());
     }
 
@@ -69,8 +68,9 @@ class DataLine extends DataType {
 
     @Override
     void output() {
-        System.out.printf("Total lines: %d.", arrayList.size());
-        System.out.printf("The longest line:\n%s \n(%d time(s), %d%%).", longestLine, count, count / arrayList.size());
+        System.out.printf("Total lines: %d.\n", arrayList.size());
+        System.out.printf("The longest line:\n%s\n(%d time(s), %.0f%%).",
+                longestLine, count, 100 * (double) count / (double) arrayList.size());
     }
 }
 
@@ -105,7 +105,8 @@ class DataWord extends DataType {
     @Override
     void output() {
         System.out.printf("Total words: %d.", arrayList.size());
-        System.out.printf("The greatest number: %s (%d time(s), %d%%).", longestWord, count, count / arrayList.size());
+        System.out.printf("The greatest number: %s (%d time(s), %.0f%%).",
+                longestWord, count, 100 * (double) count / (double) arrayList.size());
     }
 }
 
@@ -123,7 +124,3 @@ class DataTypeFactory {
         }
     }
 }
-
-
-
-

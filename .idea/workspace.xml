@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="01542495-84f2-47f6-b8c0-008226e4dfc8" name="Default Changelist" comment="">
+    <list default="true" id="01542495-84f2-47f6-b8c0-008226e4dfc8" name="Default Changelist" comment="extend DataWord">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DataType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataType.java" afterDir="false" />
     </list>
@@ -62,7 +62,7 @@
       <updated>1580066082068</updated>
       <workItem from="1580066088527" duration="2252000" />
       <workItem from="1580147345399" duration="4664000" />
-      <workItem from="1580210783817" duration="10080000" />
+      <workItem from="1580210783817" duration="11524000" />
     </task>
     <task id="LOCAL-00001" summary="add shit code">
       <created>1580067469816</created>
@@ -106,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580231756883</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="extend DataWord">
+      <created>1580240090918</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1580240090918</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,6 +121,17 @@
   </component>
   <component name="UpdateCopyrightCheckinHandler">
     <option name="UPDATE_COPYRIGHT" value="true" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
@@ -135,10 +153,10 @@
       <screen x="0" y="0" width="1825" height="1027" />
     </state>
     <state x="956" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1825.1027@0.0.1825.1027" timestamp="1580213722356" />
-    <state x="300" y="86" key="CommitChangelistDialog2" timestamp="1580231756065">
+    <state x="300" y="86" key="CommitChangelistDialog2" timestamp="1580240110664">
       <screen x="0" y="0" width="1825" height="1027" />
     </state>
-    <state x="300" y="86" key="CommitChangelistDialog2/0.0.1825.1027@0.0.1825.1027" timestamp="1580231756065" />
+    <state x="300" y="86" key="CommitChangelistDialog2/0.0.1825.1027@0.0.1825.1027" timestamp="1580240110664" />
     <state width="1203" height="301" key="GridCell.Tab.0.bottom" timestamp="1580216299061">
       <screen x="0" y="0" width="1825" height="1027" />
     </state>

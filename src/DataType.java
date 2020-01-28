@@ -1,15 +1,18 @@
 abstract class DataType {
+    abstract void input();
+
     abstract void processing();
 
-    abstract void print();
+    abstract void output();
 }
 
 
 // TODO: 28.01.2020  
 class DataLong extends DataType {
 
-    public DataLong(long[] longs) {
-        super();
+    @Override
+    void input() {
+
     }
 
     @Override
@@ -18,15 +21,16 @@ class DataLong extends DataType {
     }
 
     @Override
-    void print() {
+    void output() {
 
     }
 }
 
 class DataLine extends DataType {
 
-    public DataLine(int string, String[] strings) {
-        super();
+    @Override
+    void input() {
+
     }
 
     @Override
@@ -35,15 +39,16 @@ class DataLine extends DataType {
     }
 
     @Override
-    void print() {
+    void output() {
 
     }
 }
 
 class DataWord extends DataType {
 
-    public DataWord(String[] strings) {
-        super();
+    @Override
+    void input() {
+
     }
 
     @Override
@@ -52,22 +57,23 @@ class DataWord extends DataType {
     }
 
     @Override
-    void print() {
+    void output() {
 
     }
 }
 
 class DataTypeFactory {
-    public static DataType newInstance(long... longs) {
-        return new DataLong(longs);
-    }
-
-    public static DataType newInstance(int string, String... strings) {
-        return new DataLine(string, strings);
-    }
-
-    public static DataType newInstance(String... strings) {
-        return new DataWord(strings);
+    public static DataType newInstance(String type) {
+        switch (type) {
+            case "long":
+                return new DataLong();
+            case "line":
+                return new DataLine();
+            case "word":
+                return new DataWord();
+            default:
+                throw new RuntimeException("Invalid data type");
+        }
     }
 }
 

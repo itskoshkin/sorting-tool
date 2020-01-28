@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+
 abstract class DataType {
     abstract void input();
 
@@ -10,19 +14,28 @@ abstract class DataType {
 // TODO: 28.01.2020  
 class DataLong extends DataType {
 
+    private ArrayList<Long> arrayList;
+    private int count = 0;
+    private long max = 0;
+
     @Override
     void input() {
-
+        final Scanner scanner = new Scanner(System.in);
+        arrayList = new ArrayList<>();
+        while (scanner.hasNextLong())
+            arrayList.add(scanner.nextLong());
     }
 
     @Override
     void processing() {
-
+        max = Collections.max(arrayList);
+        for (Long number : arrayList) if (number == max) count++;
     }
 
     @Override
     void output() {
-
+        System.out.printf("Total numbers: %d.", arrayList.size());
+        System.out.printf("The greatest number: %d (%d time(s)).", max, count);
     }
 }
 

@@ -41,9 +41,14 @@ class DataLong extends DataType {
 
 class DataLine extends DataType {
 
+    private ArrayList<String> arrayList;
+
     @Override
     void input() {
-
+        final Scanner scanner = new Scanner(System.in);
+        arrayList = new ArrayList<>();
+        while (scanner.hasNext())
+            arrayList.add(scanner.nextLine());
     }
 
     @Override
@@ -53,15 +58,20 @@ class DataLine extends DataType {
 
     @Override
     void output() {
-
+        System.out.printf("Total numbers: %d.", arrayList.size());
     }
 }
 
 class DataWord extends DataType {
 
+    private ArrayList<String> arrayList;
+
     @Override
     void input() {
-
+        final Scanner scanner = new Scanner(System.in);
+        arrayList = new ArrayList<>();
+        while (scanner.hasNext())
+            arrayList.add(scanner.next());
     }
 
     @Override
@@ -71,7 +81,7 @@ class DataWord extends DataType {
 
     @Override
     void output() {
-
+        System.out.printf("Total numbers: %d.", arrayList.size());
     }
 }
 

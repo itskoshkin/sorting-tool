@@ -58,13 +58,15 @@ class DataLine extends DataType {
 
     @Override
     void output() {
-        System.out.printf("Total numbers: %d.", arrayList.size());
+        System.out.printf("Total lines: %d.", arrayList.size());
     }
 }
 
 class DataWord extends DataType {
 
     private ArrayList<String> arrayList;
+    private StringBuilder longestWord;
+    private int count = 0;
 
     @Override
     void input() {
@@ -76,12 +78,19 @@ class DataWord extends DataType {
 
     @Override
     void processing() {
+        longestWord = new StringBuilder();
+        for (String string : arrayList)
+            if (string.length() > longestWord.length())
+                longestWord = new StringBuilder(string);
+
+        for (String string : arrayList) if (string.contentEquals(longestWord)) count++;
 
     }
 
     @Override
     void output() {
-        System.out.printf("Total numbers: %d.", arrayList.size());
+        System.out.printf("Total words: %d.", arrayList.size());
+        System.out.printf("The greatest number: %s (%d time(s)).", longestWord, count / arrayList.size());
     }
 }
 
